@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 5rem;
-  width: 80%;
+  width: 65%;
   margin: auto;
   align-items: center;
   padding: 80px 0;
@@ -53,7 +53,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 5rem;
-  width: 80%;
+  width: 65%;
   margin: auto;
   align-items: center;
   padding: 80px 0;
@@ -84,7 +84,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 5rem;
-  width: 80%;
+  width: 65%;
   margin: auto;
   align-items: center;
   padding: 80px 0;
@@ -116,7 +116,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 5rem;
-  width: 80%;
+  width: 65%;
   margin: auto;
   align-items: center;
   padding: 80px 0;
