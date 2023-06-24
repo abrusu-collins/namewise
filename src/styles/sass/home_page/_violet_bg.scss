@@ -1,17 +1,18 @@
-.free {
-    color: $violet;
-    & .free-inner {
+.violet {
+    background-color: $violet;
+    color: $white;
+    & .violet-inner {
       @include gridder(5rem, 2fr, 1fr);
       & > div {
-        & .free-title {
+        & .violet-title {
           font-size: 38px;
           font-family: uncutBold;
         }
-        & .free-text {
+        & .violet-text {
           margin: 30px 0;
         }
         & a {
-          @include primary_button($violet, $white);
+          @include primary_button($white, $violet);
         }
       }
       & img {
@@ -19,4 +20,3 @@
       }
     }
   }
-  

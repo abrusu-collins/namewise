@@ -3,11 +3,11 @@ import React from "react";
 function Free() {
   return (
     <div>
-      <div className="free">
-        <div className="free-inner">
+      <div className="white">
+        <div className="white-inner">
           <div>
-            <p className="free-title">Lorem ipsum dolor sit amet,</p>
-            <p className="free-text">
+            <p className="white-title">Lorem ipsum dolor sit amet,</p>
+            <p className="white-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta,
               itaque quis repellat, pariatur quibusdam porro alias est fugit
               mollitia similique perferendis nesciunt praesentium et reiciendis

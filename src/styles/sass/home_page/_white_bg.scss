@@ -1,18 +1,17 @@
-.hero {
-    background-color: $violet;
-    color: $white;
-    & .hero-inner {
+.white {
+    color: $violet;
+    & .white-inner {
       @include gridder(5rem, 2fr, 1fr);
       & > div {
-        & .hero-title {
+        & .white-title {
           font-size: 38px;
           font-family: uncutBold;
         }
-        & .hero-text {
+        & .white-text {
           margin: 30px 0;
         }
         & a {
-          @include primary_button($white, $violet);
+          @include primary_button($violet, $white);
         }
       }
       & img {
@@ -20,3 +19,4 @@
       }
     }
   }
+  
