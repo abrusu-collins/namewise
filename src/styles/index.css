@@ -107,6 +107,12 @@ nav ul {
   width: 100%;
 }
 
+.search {
+  height: 30vh;
+  background-color: #222222;
+  color: #fcfeff;
+}
+
 @media screen and (max-width: 966px) {
   nav .navbar {
     width: 100%;
