@@ -1,0 +1,40 @@
+@font-face {
+  font-family: uncutBold;
+  src: url("../../public/fonts/Uncut-Sans-Bold.woff2");
+}
+
+@font-face {
+  font-family: uncutRegular;
+  src: url("../../public/fonts/Uncut-Sans-Regular.woff2");
+}
+
+$violet: #7e67ff;
+$black: #222222;
+$white: #fcfeff;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: uncutRegular;
+  line-height: 28.8px;
+}
+
+@mixin primary_button($background, $color) {
+  text-decoration: none;
+  background-color: $background;
+  color: $color;
+  padding: 10px 100px;
+  display: inline-block;
+  border-radius: 5px;
+}
+@mixin gridder($gap, $left_fraction, $right_fraction) {
+  display: grid;
+  grid-template-columns: $left_fraction $right_fraction;
+  gap: $gap;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  padding: 80px 0;
+}
+

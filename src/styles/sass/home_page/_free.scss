@@ -1,0 +1,22 @@
+.free {
+    color: $violet;
+    & .free-inner {
+      @include gridder(5rem, 2fr, 1fr);
+      & > div {
+        & .free-title {
+          font-size: 38px;
+          font-family: uncutBold;
+        }
+        & .free-text {
+          margin: 30px 0;
+        }
+        & a {
+          @include primary_button($violet, $white);
+        }
+      }
+      & img {
+        width: 100%;
+      }
+    }
+  }
+  

@@ -1,0 +1,22 @@
+.hero {
+    background-color: $violet;
+    color: $white;
+    & .hero-inner {
+      @include gridder(5rem, 2fr, 1fr);
+      & > div {
+        & .hero-title {
+          font-size: 38px;
+          font-family: uncutBold;
+        }
+        & .hero-text {
+          margin: 30px 0;
+        }
+        & a {
+          @include primary_button($white, $violet);
+        }
+      }
+      & img {
+        width: 100%;
+      }
+    }
+  }

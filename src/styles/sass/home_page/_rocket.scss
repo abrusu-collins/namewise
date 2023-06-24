@@ -1,0 +1,21 @@
+.rocket {
+  color: $violet;
+  & .rocket-inner {
+    @include gridder(5rem, 2fr, 1fr);
+    & > div {
+      & .rocket-title {
+        font-size: 38px;
+        font-family: uncutBold;
+      }
+      & .rocket-text {
+        margin: 30px 0;
+      }
+      & a {
+        @include primary_button($violet, $white);
+      }
+    }
+    & img {
+      width: 100%;
+    }
+  }
+}
