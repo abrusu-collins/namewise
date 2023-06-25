@@ -6,7 +6,7 @@ function Hero() {
       <div className="violet-inner">
         <div>
           <p className="violet-title">
-            GENERATE A NAME YOUR USERS WILL LOVE ON NAMEWISE
+            GENERATE A BRAND NAME YOUR USERS WILL LOVE ON NAMEWISE
           </p>
           <p className="violet-text">
             Discover the perfect business name that captivates and resonates
