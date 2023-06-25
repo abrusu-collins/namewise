@@ -6,14 +6,14 @@ function Free() {
       <div className="white">
         <div className="white-inner">
           <div>
-            <p className="white-title">Lorem ipsum dolor sit amet,</p>
+            <p className="white-title">IT&apos;S FREE OF CHARGE!!!</p>
             <p className="white-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta,
-              itaque quis repellat, pariatur quibusdam porro alias est fugit
-              mollitia similique perferendis nesciunt praesentium et reiciendis
-              ad maxime? Aperiam, nostrum ab.
+              Explore a vast array of unique and captivating name suggestions,
+              meticulously curated for you. Best of all, it&apos;s
+              completely free of charge, ensuring limitless possibilities for
+              entrepreneurs and startups alike.
             </p>
-            <a href=""> Get Started</a>
+            <a href="">I like free things😅</a>
           </div>
           <img src="/3d/gift.webp" alt="" />
         </div>

@@ -5,12 +5,13 @@ function Hero() {
     <div className="violet">
       <div className="violet-inner">
         <div>
-          <p className="violet-title">Lorem ipsum dolor sit amet,</p>
+          <p className="violet-title">
+            GENERATE A NAME YOUR USERS WILL LOVE ON NAMEWISE
+          </p>
           <p className="violet-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta,
-            itaque quis repellat, pariatur quibusdam porro alias est fugit
-            mollitia similique perferendis nesciunt praesentium et reiciendis ad
-            maxime? Aperiam, nostrum ab.
+            Discover the perfect business name that captivates and resonates
+            with your audience on Namewise. Unlock the potential of your brand
+            with NameWise and watch your business soar to new heights.
           </p>
           <a href=""> Get Started</a>
         </div>

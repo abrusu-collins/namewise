@@ -5,14 +5,16 @@ function World() {
     <div className="violet">
       <div className="violet-inner">
         <div>
-          <p className="violet-title">Lorem ipsum dolor sit amet,</p>
-          <p className="violet-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta,
-            itaque quis repellat, pariatur quibusdam porro alias est fugit
-            mollitia similique perferendis nesciunt praesentium et reiciendis ad
-            maxime? Aperiam, nostrum ab.
+          <p className="violet-title">
+            GET A NAME THAT WILL RESONATE WITH USERS WORLDWIDE
           </p>
-          <a href=""> Get Started</a>
+          <p className="violet-text">
+            Elevate your brand&apos;s international presence and connect with a
+            diverse audience like never before. Seamlessly bridge language and
+            cultural barriers by discovering captivating names that resonate
+            with users worldwide.
+          </p>
+          <a href="">Go worldwide!</a>
         </div>
         <img src="/3d/world.webp" alt="" />
       </div>

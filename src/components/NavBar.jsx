@@ -9,17 +9,17 @@ function NavBar() {
     <nav>
       <div className="navbar">
         <Link href="/">
-          <MdDriveFileRenameOutline size={35}  color="white"/>
+          <MdDriveFileRenameOutline size={35} color="white" />
         </Link>
         <ul>
           <li>
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/single">Single Image</Link>
+            <Link href="/single">Generate</Link>
           </li>
           <li>
-            <Link href="/multiple">Multiple Images</Link>
+            <Link href="/multiple">Feedback</Link>
           </li>
           <li>
             <Link href="sponsor">Sponsor</Link>

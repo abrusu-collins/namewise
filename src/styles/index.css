@@ -60,6 +60,7 @@ nav ul {
 .violet .violet-inner > div .violet-title {
   font-size: 38px;
   font-family: uncutBold;
+  line-height: 60px;
 }
 .violet .violet-inner > div .violet-text {
   margin: 30px 0;
@@ -91,6 +92,7 @@ nav ul {
 .white .white-inner > div .white-title {
   font-size: 38px;
   font-family: uncutBold;
+  line-height: 60px;
 }
 .white .white-inner > div .white-text {
   margin: 30px 0;
