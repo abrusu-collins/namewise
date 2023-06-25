@@ -75,6 +75,15 @@ function Generator() {
           Generate
         </a>
       </div>
+      {resultArray.length > 0 && (
+        <p>These are the {numberOfResults} names you asked for</p>
+      )}
+      <div className="results">
+        {resultArray.length > 0 &&
+          resultArray.map((names) => {
+            return <p key={names}>{names}</p>;
+          })}
+      </div>
     </div>
   );
 }
