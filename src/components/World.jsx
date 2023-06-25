@@ -17,6 +17,7 @@ function World() {
           <Link href="/app">Go worldwide!</Link>
         </div>
         <img src="/3d/world.webp" alt="" />
+
       </div>
     </div>
   );

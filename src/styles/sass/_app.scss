@@ -1,0 +1,46 @@
+.app-page {
+  & .app-title {
+    font-size: 38px;
+    font-family: uncutBold;
+    margin: 50px 0;
+    line-height: 60px;
+    text-align: center;
+  }
+  & .details {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin: auto;
+    & input {
+      display: block;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #d7dbe0;
+      padding: 10px;
+      &:focus {
+        outline: 1px solid $violet;
+      }
+    }
+    & textarea {
+      display: block;
+      width: 100%;
+      margin: 30px 0;
+      height: 100px;
+      border-radius: 5px;
+      border: 1px solid #d7dbe0;
+      padding: 10px;
+      resize: none;
+      &:focus {
+        outline: 1px solid $violet;
+      }
+    }
+    & a {
+      @include primary_button($violet, $white);
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
