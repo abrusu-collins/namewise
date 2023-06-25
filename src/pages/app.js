@@ -6,17 +6,23 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 function Generator() {
-  const [industry, setIndustry] = useState("e-commerce");
-  const [work, setWork] = useState("sell shoes");
+  const [industry, setIndustry] = useState("");
+  const [work, setWork] = useState("");
   const [numberOfResults, setnumberOfResults] = useState(25);
+  const [emptyIndustry, setEmptyIndustry] = useState(false);
+  const [emptyWork, setEmptyWork] = useState(false);
   const [resultArray, setResultArray] = useState([]);
-  useEffect(() => {
-    if (resultArray !== []) {
-      console.log(resultArray);
-    }
-  }, [resultArray]);
+
   const generate = (e) => {
     e.preventDefault();
+    if (!industry) {
+      setEmptyIndustry(true);
+      return;
+    }
+    if (!work) {
+      setEmptyWork(true);
+      return;
+    }
     openai
       .createCompletion({
         model: "text-davinci-003",
@@ -48,16 +54,22 @@ function Generator() {
           name="industry"
           id="industry"
           placeholder="Company Industry"
+          className={emptyIndustry ? "form-invalid" : ""}
           onChange={(e) => {
             setIndustry(e.target.value);
+            setResultArray([]);
+            setEmptyIndustry(false);
           }}
         />
         <textarea
           name="work"
           id="work"
           placeholder="Describe what your company does"
+          className={emptyWork ? "form-invalid" : ""}
           onChange={(e) => {
             setWork(e.target.value);
+            setResultArray([]);
+            setEmptyWork(false);
           }}
         ></textarea>
 
@@ -65,9 +77,10 @@ function Generator() {
           type="number"
           name="result_number"
           id="result_number"
-          placeholder="How many results do you want?"
+          placeholder="How many results do you want? default is 25"
           onChange={(e) => {
             setnumberOfResults(e.target.value);
+            setResultArray([]);
           }}
         />
 
@@ -76,7 +89,9 @@ function Generator() {
         </a>
       </div>
       {resultArray.length > 0 && (
-        <p>These are the {numberOfResults} names you asked for</p>
+        <p className="results-title">
+          These are the {numberOfResults} names you asked for
+        </p>
       )}
       <div className="results">
         {resultArray.length > 0 &&

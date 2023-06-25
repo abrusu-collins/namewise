@@ -14,6 +14,10 @@
   line-height: 28.8px;
 }
 
+.form-invalid {
+  border: 1px solid red !important;
+}
+
 nav {
   color: #fcfeff;
   background-color: #7e67ff;
@@ -190,6 +194,26 @@ nav ul {
   border-radius: 5px;
   width: 100%;
   margin-top: 30px;
+}
+.app-page .results-title {
+  font-size: 38px;
+  font-family: uncutBold;
+  margin: 50px 0;
+  line-height: 60px;
+  text-align: center;
+}
+.app-page .results {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 70%;
+  margin: 60px auto;
+  gap: 3rem;
+}
+.app-page .results p {
+  border: 1px solid #7e67ff;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 966px) {
