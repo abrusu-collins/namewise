@@ -16,13 +16,15 @@ function NavBar() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/single">Generate</Link>
+            <Link href="/app">Generate</Link>
           </li>
           <li>
-            <Link href="/multiple">Feedback</Link>
+            <Link href="mailto:snillochemingson@gmail.com">Feedback</Link>
           </li>
           <li>
-            <Link href="sponsor">Sponsor</Link>
+            <Link href="https://www.buymeacoffee.com/collinsabrusu">
+              Sponsor
+            </Link>
           </li>
         </ul>
         <div className="bar">
@@ -49,13 +51,13 @@ function NavBar() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/single">Single Image</Link>
+          <Link href="/app">Generate</Link>
         </li>
         <li>
-          <Link href="/multiple">Multiple Images</Link>
+          <Link href="mailto:snillochemingson@gmail.com">Feedback</Link>
         </li>
         <li>
-          <Link href="/sponsor">Sponsor</Link>
+          <Link href="https://www.buymeacoffee.com/collinsabrusu">Sponsor</Link>
         </li>
       </ul>
     </nav>

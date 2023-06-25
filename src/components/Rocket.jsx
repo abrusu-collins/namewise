@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 function Rocket() {
   return (
     <div className="white">
@@ -15,7 +15,7 @@ function Rocket() {
             that sets your venture on a trajectory towards unmatched growth and
             recognition.
           </p>
-          <a href="">Let&apos;s goooo🚀</a>
+          <Link href="/app">Let&apos;s goooo🚀</Link>
         </div>
         <img src="/3d/rocket.png" alt="" />
       </div>

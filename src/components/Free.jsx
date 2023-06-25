@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 function Free() {
   return (
     <div>
@@ -13,7 +13,7 @@ function Free() {
               completely free of charge, ensuring limitless possibilities for
               entrepreneurs and startups alike.
             </p>
-            <a href="">I like free things😅</a>
+            <Link href="/app">I like free things😅</Link>
           </div>
           <img src="/3d/gift.webp" alt="" />
         </div>

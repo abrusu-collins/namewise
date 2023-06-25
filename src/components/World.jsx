@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 function World() {
   return (
     <div className="violet">
@@ -14,7 +14,7 @@ function World() {
             cultural barriers by discovering captivating names that resonate
             with users worldwide.
           </p>
-          <a href="">Go worldwide!</a>
+          <Link href="/app">Go worldwide!</Link>
         </div>
         <img src="/3d/world.webp" alt="" />
       </div>
