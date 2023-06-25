@@ -14,7 +14,7 @@ function World() {
           </p>
           <a href=""> Get Started</a>
         </div>
-        <img src="/3d/world.png" alt="" />
+        <img src="/3d/world.webp" alt="" />
       </div>
     </div>
   );

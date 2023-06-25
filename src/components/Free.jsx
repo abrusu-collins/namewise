@@ -15,7 +15,7 @@ function Free() {
             </p>
             <a href=""> Get Started</a>
           </div>
-          <img src="/3d/gift.png" alt="" />
+          <img src="/3d/gift.webp" alt="" />
         </div>
       </div>
     </div>

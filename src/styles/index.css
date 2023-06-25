@@ -108,9 +108,36 @@ nav ul {
 }
 
 .search {
-  height: 30vh;
   background-color: #222222;
   color: #fcfeff;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  padding: 50px 0;
+  gap: 10rem;
+  align-items: center;
+}
+.search .text {
+  width: 70%;
+}
+.search .text .thanks {
+  font-size: 38px;
+  font-family: uncutBold;
+}
+.search .text .thanks-text {
+  margin: 30px 0;
+}
+.search .text .socials {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 50px;
+}
+.search .text .socials a {
+  text-decoration: none;
+  color: #fcfeff;
+  font-size: 25px;
+}
+.search img {
+  width: 100%;
 }
 
 @media screen and (max-width: 966px) {

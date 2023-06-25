@@ -1,5 +1,32 @@
-.search{
-    height:30vh;
-    background-color: $black;
-    color:$white;
+.search {
+  background-color: $black;
+  color: $white;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  padding: 50px 0;
+  gap: 10rem;
+  align-items: center;
+  & .text {
+    width: 70%;
+    & .thanks {
+      font-size: 38px;
+      font-family: uncutBold;
+    }
+    & .thanks-text{
+        margin: 30px 0;
+    }
+    & .socials{
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 50px;
+        & a{
+            text-decoration: none;
+            color:$white;
+            font-size: 25px;
+        }
+    }
+  }
+  & img {
+    width: 100%;
+  }
 }

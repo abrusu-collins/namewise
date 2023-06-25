@@ -14,7 +14,7 @@ function Hero() {
           </p>
           <a href=""> Get Started</a>
         </div>
-        <img src="/3d/love-bulb.png" alt="" />
+        <img src="/3d/love-bulb.webp" alt="" />
       </div>
     </div>
   );
