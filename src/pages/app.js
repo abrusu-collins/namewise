@@ -58,7 +58,7 @@ function Generator() {
           type="text"
           name="industry"
           id="industry"
-          placeholder="Company Industry"
+          placeholder="Company Industry e.g Sports, Health, Tech"
           className={emptyIndustry ? "form-invalid" : ""}
           onChange={(e) => {
             setIndustry(e.target.value);

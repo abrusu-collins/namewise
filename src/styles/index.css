@@ -231,7 +231,7 @@ nav ul {
 .app-page .results p {
   border: 1px solid #7e67ff;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px;
   border-radius: 5px;
 }
 .app-page .regenerate {
