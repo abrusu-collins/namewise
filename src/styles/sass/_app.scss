@@ -65,4 +65,14 @@
       border-radius: 5px;
     }
   }
+  & .regenerate {
+    @include primary_button($violet, $white);
+    // padding: 10px 100px;
+    width: 30%;
+    margin-bottom: 60px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+  }
+  text-align: center;
 }

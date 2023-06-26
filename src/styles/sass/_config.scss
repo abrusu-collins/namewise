@@ -19,6 +19,9 @@ $white: #fcfeff;
   font-family: uncutRegular;
   line-height: 28.8px;
 }
+body {
+  color: $black;
+}
 
 @mixin primary_button($background, $color) {
   text-decoration: none;
@@ -38,6 +41,17 @@ $white: #fcfeff;
   padding: 80px 0;
 }
 
-.form-invalid{
-    border: 1px solid red !important;
+.form-invalid {
+  border: 1px solid red !important;
 }
+#nprogress .bar {
+    background: $black !important;
+    color: $black !important;
+    padding: 0 5px !important;
+    height: 3px !important;
+}
+
+ #nprogress .spinner .spinner-icon {
+    border-top-color: $black !important;
+    border-left-color: $black !important;
+ }

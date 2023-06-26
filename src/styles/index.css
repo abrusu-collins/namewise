@@ -14,8 +14,24 @@
   line-height: 28.8px;
 }
 
+body {
+  color: #222222;
+}
+
 .form-invalid {
   border: 1px solid red !important;
+}
+
+#nprogress .bar {
+  background: #222222 !important;
+  color: #222222 !important;
+  padding: 0 5px !important;
+  height: 3px !important;
+}
+
+#nprogress .spinner .spinner-icon {
+  border-top-color: #222222 !important;
+  border-left-color: #222222 !important;
 }
 
 nav {
@@ -146,6 +162,9 @@ nav ul {
   width: 100%;
 }
 
+.app-page {
+  text-align: center;
+}
 .app-page .app-title {
   font-size: 38px;
   font-family: uncutBold;
@@ -214,6 +233,19 @@ nav ul {
   text-align: center;
   padding: 15px 0;
   border-radius: 5px;
+}
+.app-page .regenerate {
+  text-decoration: none;
+  background-color: #7e67ff;
+  color: #fcfeff;
+  padding: 10px 100px;
+  display: inline-block;
+  border-radius: 5px;
+  width: 30%;
+  margin-bottom: 60px;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 966px) {
