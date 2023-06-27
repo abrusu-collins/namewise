@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import nProgress, * as NProgress from "nprogress";
 import "nprogress/nprogress.css";
 import { Configuration, OpenAIApi } from "openai";
@@ -14,6 +15,7 @@ function Generator() {
   const [emptyIndustry, setEmptyIndustry] = useState(false);
   const [emptyWork, setEmptyWork] = useState(false);
   const [resultArray, setResultArray] = useState([]);
+  const router = useRouter();
   const generate = (e) => {
     e.preventDefault();
     if (!industry) {
@@ -43,6 +45,7 @@ function Generator() {
       .then((data) => {
         NProgress.done();
         setResultArray(data?.data?.choices[0]?.text.split(","));
+        router.push("#results-title");
         console.log(data.data.choices[0].text);
       })
       .catch((err) => {
@@ -94,7 +97,7 @@ function Generator() {
         </a>
       </div>
       {resultArray.length > 0 && (
-        <p className="results-title">
+        <p className="results-title" id="results-title">
           These are the {numberOfResults} names you asked for😍
         </p>
       )}
