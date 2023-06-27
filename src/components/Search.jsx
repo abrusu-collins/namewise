@@ -15,13 +15,13 @@ function Search() {
           socials below.
         </p>
         <div className="socials">
-          <a href="">
+          <a href="https://github.com/abrusu-collins">
             <BsGithub />
           </a>
-          <a href="">
+          <a href="https://twitter.com/sedem_tsx">
             <BsTwitter />
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/abrusu-collins-359a4416a/">
             <BsLinkedin />
           </a>
         </div>
