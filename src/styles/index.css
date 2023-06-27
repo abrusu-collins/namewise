@@ -379,3 +379,77 @@ nav ul {
     width: 90%;
   }
 }
+@media screen and (max-width: 1313px) {
+  .app-page .details {
+    width: 50%;
+  }
+  .app-page .regenerate {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1236px) {
+  .app-page .results {
+    grid-template-columns: repeat(4, 1fr);
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1022px) {
+  .app-page .results {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 926px) {
+  .app-page .results {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 769px) {
+  .app-page .details {
+    width: 60%;
+  }
+  .app-page .regenerate {
+    width: 60%;
+  }
+  .app-page .app-title {
+    font-size: 30px;
+  }
+  .app-page .results-title {
+    font-size: 30px;
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 676px) {
+  .app-page .results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 627px) {
+  .app-page .details {
+    width: 75%;
+  }
+  .app-page .regenerate {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 472px) {
+  .app-page .details {
+    width: 85%;
+  }
+  .app-page .regenerate {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 411px) {
+  .app-page .results {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 339px) {
+  .app-page .details {
+    width: 90%;
+  }
+  .app-page .regenerate {
+    width: 90%;
+  }
+}
