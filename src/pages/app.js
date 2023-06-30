@@ -26,6 +26,9 @@ function Generator() {
       setEmptyWork(true);
       return;
     }
+    if (numberOfResults < 1) {
+      return;
+    }
     NProgress.start();
     // setResultArray([]);
     openai
@@ -86,6 +89,7 @@ function Generator() {
           name="result_number"
           id="result_number"
           placeholder="How many results do you want? default is 25"
+          min={1}
           onChange={(e) => {
             setnumberOfResults(e.target.value);
             setResultArray([]);
