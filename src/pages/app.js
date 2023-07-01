@@ -11,6 +11,7 @@ function Generator() {
   const [emptyWork, setEmptyWork] = useState(false);
   const [resultArray, setResultArray] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoading2, setIsLoading2] = useState(false);
   const router = useRouter();
   const toast = useToast();
   const doNothing = (e) => {
@@ -66,6 +67,41 @@ function Generator() {
       })
       .finally(() => {
         setIsLoading(false);
+      });
+  };
+  const reGenerate = (e) => {
+    e.preventDefault();
+    setIsLoading2(true);
+    fetch("http://localhost:3000/api/names", {
+      method: "POST",
+      body: JSON.stringify({
+        industry: industry,
+        work: work,
+        numberOfResults: numberOfResults || 25,
+      }),
+      headers: { "content-type": "application/json" },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        if (data.error) {
+          return toast({
+            title: "An error occurred",
+            description: `${data.error}`,
+            status: "error",
+            duration: 9000,
+            isClosable: true,
+          });
+        }
+        setResultArray(data.split(","));
+        console.log(data.split(","));
+      })
+      .catch((err) => {
+        console.log(err.error);
+      })
+      .finally(() => {
+        setIsLoading2(false);
       });
   };
   return (
@@ -127,9 +163,9 @@ function Generator() {
         <a
           href=" "
           className="regenerate"
-          onClick={isLoading ? doNothing : generate}
+          onClick={isLoading2 ? doNothing : reGenerate}
         >
-          {isLoading ? <Spinner size="md" /> : "Regenerate"}
+          {isLoading2 ? <Spinner size="md" /> : "Regenerate"}
         </a>
       )}
     </div>
