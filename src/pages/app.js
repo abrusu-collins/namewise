@@ -61,6 +61,7 @@ function Generator() {
         }
         setResultArray(data.split(","));
         console.log(data.split(","));
+        router.push("#results-title");
       })
       .catch((err) => {
         console.log(err.error);
@@ -96,6 +97,7 @@ function Generator() {
         }
         setResultArray(data.split(","));
         console.log(data.split(","));
+        router.push("#results-title");
       })
       .catch((err) => {
         console.log(err.error);
