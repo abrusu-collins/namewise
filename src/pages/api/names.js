@@ -41,7 +41,7 @@ export default function handler(req, res) {
       })
       .then((data) => {
         console.log(data.data.choices[0].text);
-        res.status(200).json(stringify(data.data.choices[0]));
+        res.status(200).json(data.data.choices[0].text);
       })
       .catch((err) => {
         console.log(err);

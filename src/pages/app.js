@@ -1,7 +1,5 @@
 import React, { use, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import nProgress, * as NProgress from "nprogress";
-import "nprogress/nprogress.css";
 import { useToast } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
 
@@ -60,7 +58,8 @@ function Generator() {
             isClosable: true,
           });
         }
-        console.log(data);
+        setResultArray(data.split(","));
+        console.log(data.split(","));
       })
       .catch((err) => {
         console.log(err.error);
@@ -109,7 +108,7 @@ function Generator() {
           }}
         />
 
-        <a href="" onClick={generate}>
+        <a href="" onClick={isLoading ? doNothing : generate}>
           {isLoading ? <Spinner size="md" /> : "Generate"}
         </a>
       </div>
@@ -125,7 +124,11 @@ function Generator() {
           })}
       </div>
       {resultArray.length > 0 && (
-        <a href=" " className="regenerate" onClick={generate}>
+        <a
+          href=" "
+          className="regenerate"
+          onClick={isLoading ? doNothing : generate}
+        >
           {isLoading ? <Spinner size="md" /> : "Regenerate"}
         </a>
       )}
