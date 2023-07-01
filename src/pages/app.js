@@ -37,7 +37,7 @@ function Generator() {
       return;
     }
     setIsLoading(true);
-    fetch("http://localhost:3000/api/names", {
+    fetch("https://namewise.vercel.app/api/names", {
       method: "POST",
       body: JSON.stringify({
         industry: industry,
@@ -72,7 +72,7 @@ function Generator() {
   const reGenerate = (e) => {
     e.preventDefault();
     setIsLoading2(true);
-    fetch("http://localhost:3000/api/names", {
+    fetch("https://namewise.vercel.app/api/names", {
       method: "POST",
       body: JSON.stringify({
         industry: industry,
