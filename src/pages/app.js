@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import nProgress, * as NProgress from "nprogress";
 import "nprogress/nprogress.css";
+import { useToast } from "@chakra-ui/react";
+import { Spinner } from "@chakra-ui/react";
 
 function Generator() {
   const [industry, setIndustry] = useState("");
@@ -10,7 +12,12 @@ function Generator() {
   const [emptyIndustry, setEmptyIndustry] = useState(false);
   const [emptyWork, setEmptyWork] = useState(false);
   const [resultArray, setResultArray] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const toast = useToast();
+  const doNothing = (e) => {
+    e.preventDefault();
+  };
   const generate = (e) => {
     e.preventDefault();
     if (!industry) {
@@ -22,9 +29,15 @@ function Generator() {
       return;
     }
     if (numberOfResults < 1) {
+      toast({
+        title: "Number of results should be more than 0",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
       return;
     }
-    // NProgress.start();
+    setIsLoading(true);
     fetch("http://localhost:3000/api/names", {
       method: "POST",
       body: JSON.stringify({
@@ -38,11 +51,22 @@ function Generator() {
         return res.json();
       })
       .then((data) => {
+        if (data.error) {
+          return toast({
+            title: "An error occurred",
+            description: `${data.error}`,
+            status: "error",
+            duration: 9000,
+            isClosable: true,
+          });
+        }
         console.log(data);
       })
       .catch((err) => {
-        NProgress.done();
-        console.log(err);
+        console.log(err.error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
   return (
@@ -86,7 +110,7 @@ function Generator() {
         />
 
         <a href="" onClick={generate}>
-          Generate
+          {isLoading ? <Spinner size="md" /> : "Generate"}
         </a>
       </div>
       {resultArray.length > 0 && (
@@ -102,7 +126,7 @@ function Generator() {
       </div>
       {resultArray.length > 0 && (
         <a href=" " className="regenerate" onClick={generate}>
-          Regenerate
+          {isLoading ? <Spinner size="md" /> : "Regenerate"}
         </a>
       )}
     </div>
