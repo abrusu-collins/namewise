@@ -2,11 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import nProgress, * as NProgress from "nprogress";
 import "nprogress/nprogress.css";
-import { Configuration, OpenAIApi } from "openai";
-const configuration = new Configuration({
-  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
 
 function Generator() {
   const [industry, setIndustry] = useState("");
@@ -29,27 +24,21 @@ function Generator() {
     if (numberOfResults < 1) {
       return;
     }
-    NProgress.start();
-    // setResultArray([]);
-    openai
-      .createCompletion({
-        model: "text-davinci-003",
-        prompt: `I am starting a company in the ${industry} industry. 
-        The function of the company is ${work}.
-         Generate names I can give to the company. Strictly give me ${numberOfResults} names.
-         Reply with only the names seperated by commas. Don't add anything else.
-        `,
-        temperature: 1,
-        max_tokens: 700,
-      })
+    // NProgress.start();
+    fetch("http://localhost:3000/api/names", {
+      method: "POST",
+      body: JSON.stringify({
+        industry: industry,
+        work: work,
+        numberOfResults: numberOfResults || 25,
+      }),
+      headers: { "content-type": "application/json" },
+    })
       .then((res) => {
-        return res;
+        return res.json();
       })
       .then((data) => {
-        NProgress.done();
-        setResultArray(data?.data?.choices[0]?.text.split(","));
-        router.push("#results-title");
-        console.log(data.data.choices[0].text);
+        console.log(data);
       })
       .catch((err) => {
         NProgress.done();
