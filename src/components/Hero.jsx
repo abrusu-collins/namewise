@@ -3,7 +3,7 @@ import Link from "next/link";
 function Hero() {
   return (
     <div className="violet">
-      <div className="violet-inner">
+      <div className="container violet-inner ">
         <div>
           <p className="violet-title">
             GENERATE A BRAND NAME YOUR USERS WILL LOVE ON NAMEWISE

@@ -23,16 +23,8 @@ body {
   border: 1px solid red !important;
 }
 
-#nprogress .bar {
-  background: #222222 !important;
-  color: #222222 !important;
-  padding: 0 5px !important;
-  height: 3px !important;
-}
-
-#nprogress .spinner .spinner-icon {
-  border-top-color: #222222 !important;
-  border-left-color: #222222 !important;
+.container {
+  max-width: 1366px;
 }
 
 nav {

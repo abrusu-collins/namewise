@@ -6,7 +6,7 @@ function Search() {
     <div className="search">
       <img src="/3d/hand.webp" alt="" />
 
-      <div className="text">
+      <div className="text container">
         <p className="thanks">Thank you for checking out NAMEWISE</p>
         <p className="thanks-text">
           I am dedicated to assisting you in creating a strong brand identity by

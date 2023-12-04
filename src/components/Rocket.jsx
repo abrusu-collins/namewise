@@ -3,7 +3,7 @@ import Link from "next/link";
 function Rocket() {
   return (
     <div className="white">
-      <div className="white-inner">
+      <div className="white-inner container">
         <div>
           <p className="white-title">
             SKYROCKET YOUR BUSINESS WITH THE PERFECT NAME

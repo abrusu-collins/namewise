@@ -4,7 +4,7 @@ function Free() {
   return (
     <div>
       <div className="white">
-        <div className="white-inner">
+        <div className="white-inner container">
           <div>
             <p className="white-title">IT&apos;S FREE OF CHARGE!!!</p>
             <p className="white-text">

@@ -3,7 +3,7 @@ import Link from "next/link";
 function World() {
   return (
     <div className="violet">
-      <div className="violet-inner">
+      <div className="violet-inner container">
         <div>
           <p className="violet-title">
             GET A NAME THAT WILL RESONATE WITH USERS WORLDWIDE
