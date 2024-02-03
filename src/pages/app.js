@@ -120,6 +120,10 @@ function Generator() {
     e.preventDefault();
     onOpen();
   };
+  const closeModal = (e) => {
+    e.preventDefault();
+    onClose();
+  };
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose} isCentered={true}>
@@ -136,7 +140,9 @@ function Generator() {
                 OpenAI fees became unsustainable for me. I appreciate your
                 understanding and support.
               </p>
-              <a href="">Close</a>
+              <a href="" onClick={closeModal}>
+                Close
+              </a>
             </div>
           </ModalBody>
         </ModalContent>
