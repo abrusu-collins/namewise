@@ -242,6 +242,34 @@ nav ul {
   align-items: center;
 }
 
+.app-modal {
+  padding: 50px 0 30px 0;
+}
+.app-modal img {
+  width: 60%;
+  margin: auto;
+}
+.app-modal .title-modal {
+  font-size: 25px;
+  font-family: uncutBold;
+  line-height: 50px;
+  text-align: center;
+}
+.app-modal .text-modal {
+  margin: 5px 0 20px 0;
+}
+.app-modal a {
+  text-decoration: none;
+  background-color: #7e67ff;
+  color: #fcfeff;
+  padding: 10px 100px;
+  display: inline-block;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
 @media screen and (max-width: 966px) {
   nav .navbar {
     width: 100%;

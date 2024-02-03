@@ -2,8 +2,18 @@ import React, { use, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useToast } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
-
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+} from "@chakra-ui/react";
 function Generator() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [industry, setIndustry] = useState("");
   const [work, setWork] = useState("");
   const [numberOfResults, setnumberOfResults] = useState(25);
@@ -106,71 +116,99 @@ function Generator() {
         setIsLoading2(false);
       });
   };
+  const openModal = (e) => {
+    e.preventDefault();
+    onOpen();
+  };
   return (
-    <div className="app-page">
-      <p className="app-title">Let&apos;s talk about your business</p>
-      <div className="details">
-        <input
-          type="text"
-          name="industry"
-          id="industry"
-          placeholder="Company Industry e.g Sports, Health, Tech"
-          className={emptyIndustry ? "form-invalid" : ""}
-          onChange={(e) => {
-            setIndustry(e.target.value);
-            setResultArray([]);
-            setEmptyIndustry(false);
-          }}
-        />
-        <textarea
-          name="work"
-          id="work"
-          placeholder="Describe what your company does"
-          className={emptyWork ? "form-invalid" : ""}
-          onChange={(e) => {
-            setWork(e.target.value);
-            setResultArray([]);
-            setEmptyWork(false);
-          }}
-        ></textarea>
+    <>
+      <Modal isOpen={isOpen} onClose={onClose} isCentered={true}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalCloseButton />
+          <ModalBody>
+            <div className="app-modal">
+              <img src="/3d/sadmail.png" alt="" />
+              <p className="title-modal">Sorry, this project is on hold</p>
+              <p className="text-modal">
+                I regret to inform you that due to budget constraints, I have
+                had to put this project on hold. Unfortunately, the cost of
+                OpenAI fees became unsustainable for me. I appreciate your
+                understanding and support.
+              </p>
+              <a href="">Close</a>
+            </div>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+      <div className="app-page">
+        <p className="app-title">Let&apos;s talk about your business</p>
+        <div className="details">
+          <input
+            type="text"
+            name="industry"
+            id="industry"
+            placeholder="Company Industry e.g Sports, Health, Tech"
+            className={emptyIndustry ? "form-invalid" : ""}
+            onChange={(e) => {
+              setIndustry(e.target.value);
+              setResultArray([]);
+              setEmptyIndustry(false);
+            }}
+          />
+          <textarea
+            name="work"
+            id="work"
+            placeholder="Describe what your company does"
+            className={emptyWork ? "form-invalid" : ""}
+            onChange={(e) => {
+              setWork(e.target.value);
+              setResultArray([]);
+              setEmptyWork(false);
+            }}
+          ></textarea>
 
-        <input
-          type="number"
-          name="result_number"
-          id="result_number"
-          placeholder="How many results do you want? default is 25"
-          min={1}
-          onChange={(e) => {
-            setnumberOfResults(e.target.value);
-            setResultArray([]);
-          }}
-        />
+          <input
+            type="number"
+            name="result_number"
+            id="result_number"
+            placeholder="How many results do you want? default is 25"
+            min={1}
+            onChange={(e) => {
+              setnumberOfResults(e.target.value);
+              setResultArray([]);
+            }}
+          />
 
-        <a href="" onClick={isLoading ? doNothing : generate}>
+          {/* <a href="" onClick={isLoading ? doNothing : generate}>
           {isLoading ? <Spinner size="md" /> : "Generate"}
-        </a>
+        </a> */}
+          <a href="" onClick={openModal}>
+            Generate
+          </a>
+        </div>
+        {resultArray.length > 0 && (
+          <p className="results-title" id="results-title">
+            These are the {numberOfResults} names you asked for😍
+          </p>
+        )}
+        <div className="results">
+          {resultArray.length > 0 &&
+            resultArray.map((names) => {
+              return <p key={names}>{names}</p>;
+            })}
+        </div>
+        {resultArray.length > 0 && (
+          <a
+            href=" "
+            className="regenerate"
+            onClick={isLoading2 ? doNothing : reGenerate}
+          >
+            {isLoading2 ? <Spinner size="md" /> : "Regenerate"}
+          </a>
+        )}
       </div>
-      {resultArray.length > 0 && (
-        <p className="results-title" id="results-title">
-          These are the {numberOfResults} names you asked for😍
-        </p>
-      )}
-      <div className="results">
-        {resultArray.length > 0 &&
-          resultArray.map((names) => {
-            return <p key={names}>{names}</p>;
-          })}
-      </div>
-      {resultArray.length > 0 && (
-        <a
-          href=" "
-          className="regenerate"
-          onClick={isLoading2 ? doNothing : reGenerate}
-        >
-          {isLoading2 ? <Spinner size="md" /> : "Regenerate"}
-        </a>
-      )}
-    </div>
+    </>
   );
 }
 
